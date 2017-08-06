@@ -24,8 +24,8 @@ def average(numbers):
   return total 
 
 def get_average(student):
-  homework = average(student["homework"])
-  quizzes = average(student["quizzes"])
-  tests = average(student["tests"])
-  return (homework * 0.1) + (quizzes * 0.3) \
-	+ (tests * 0.6)
+  homework = average(student["homework"]) * 0.1
+  quizzes = average(student["quizzes"]) * 0.3
+  tests = average(student["tests"]) * 0.6
+  w_avg = homework + quizzes + tests
+  return w_avg
